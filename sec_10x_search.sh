@@ -1,7 +1,8 @@
 #!/bin/sh
 
 
-START='06/01/2017'
+# IDK if this will work with GNU date.  Sorry.
+START=`date -v-1d +%m/%d/%Y`
 TODAY=`date +%m/%d/%Y`
 
 #curl -f -s "https://searchwww.sec.gov/EDGARFSClient/jsp/EDGAR_MainAccess.jsp?search_text=cyber%20malicious%20intrusion%20virus&sort=Date&formType=Form10K&isAdv=true&stemming=false&numResults=100&fromDate=$START&toDate=$TODAY&numResults=100&prt=true" | grep opennew | sed  's/^.*opennew(//g' | sed 's/);.*$//g'
